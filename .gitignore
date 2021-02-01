@@ -1,0 +1,6 @@
+# executables (output from go build)
+mandlebrot
+mandlebrot.exe
+
+# temp png
+image.png
