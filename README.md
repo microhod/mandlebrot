@@ -1,6 +1,6 @@
 # Mandlebrot Renderer
 
-This generate a `png` render of the [mandlebrot set](https://en.wikipedia.org/wiki/Mandelbrot_set) (see example below).
+This code will generate a `png` render of the [mandlebrot set](https://en.wikipedia.org/wiki/Mandelbrot_set) (see example below).
 
 You can tinker with the variables in [main.go](./main.go) to view different parts of the set etc.
 
