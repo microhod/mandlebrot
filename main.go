@@ -9,9 +9,13 @@ import (
 	"strconv"
 )
 
+
+
 var (
-	planeTopLeft            = -2 + 1.5i
-	planeWidth              = 3.0
+	// standard view
+	planeCenter             = -0.5 + 0i
+	planeRadius             = 1.5
+
 	imgWidth                = 1000
 	mandlebrotMaxIterations = 250
 	colorPalette            = DarkPurple
@@ -28,8 +32,7 @@ func main() {
 		}
 	}
 
-	plane := NewComplexPlane(planeTopLeft, planeWidth)
-
+	plane := NewComplexPlane(planeCenter, planeRadius)
 	img := CreateImage(imgWidth, func(p image.Point, img image.Image) color.Color {
 		c := plane.pointAtPixel(p, img)
 		if i := MandlebrotIterations(c, mandlebrotMaxIterations); i >= 0 {
