@@ -14,6 +14,7 @@ var (
 	planeWidth              = 3.0
 	imgWidth                = 1000
 	mandlebrotMaxIterations = 250
+	colorPalette            = DarkPurple
 )
 
 func main() {
@@ -32,7 +33,7 @@ func main() {
 	img := CreateImage(imgWidth, func(p image.Point, img image.Image) color.Color {
 		c := plane.pointAtPixel(p, img)
 		if i := MandlebrotIterations(c, mandlebrotMaxIterations); i >= 0 {
-			return GetPixelColor(i, DarkPurple)
+			return GetPixelColor(i, colorPalette)
 		}
 		return color.Black
 	})
